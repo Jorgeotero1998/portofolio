@@ -1,0 +1,34 @@
+import StarsCanvas from "./components/StarsCanvas";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import TechBalls from "./components/TechBalls";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+
+export default function App() {
+  return (
+    <div style={{ background: "#06010f", minHeight: "100vh", position: "relative" }}>
+      <StarsCanvas />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Navbar />
+        <Hero />
+        <div id="stack">
+          <TechBalls />
+        </div>
+        <Skills />
+        <Projects />
+        <Contact />
+        <footer style={{ textAlign: "center", padding: "2rem", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+          <p style={{ color: "rgba(226,232,240,0.2)", fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", letterSpacing: "0.05em" }}>
+            Built with React + Three.js ·{" "}
+            <span style={{ background: "linear-gradient(90deg, #fb923c, #f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              Jorge Otero
+            </span>{" "}
+            © 2026
+          </p>
+        </footer>
+      </div>
+    </div>
+  );
+}
